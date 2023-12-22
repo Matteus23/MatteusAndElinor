@@ -11,15 +11,15 @@
 <body>
   <h1>Search for a song</h1>
   <form name="searchForm" onsubmit="search(); return false">
-    <input name="term" placeholder="Search term">
+    <input name="term" placeholder="What song are you looking for?">
     <button type="submit">Search</button>
     <p>
-      Search in:
+      Search in (filter search):
       <select name="searchType">
         <option value="all">All the information about songs</option>
-        <option value="artist">Artistname</option>
-        <option value="album">Albumname</option>
-        <option value="title">Songname</option>
+        <option value="artist">Artist Name</option>
+        <option value="album">Album Name</option>
+        <option value="title">Song Name</option>
       </select>
     </p>
   </form>
