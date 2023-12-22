@@ -28,8 +28,6 @@ for (let pdf of pdfs) {
     info: data.info
   };
  
-
-  // get the full text of the pdf as well
   let fullText = data.text;
 
   let result = await query(`
@@ -37,11 +35,8 @@ for (let pdf of pdfs) {
     VALUES(?, ?)
   `, [pdf, metadata]);
  
-  // Logga resultatet för att se att något händer.
   console.log(pdf, result);
  
 }
- 
-// Automatisk stop när det är klart, annars tror VSC
-// att något mer ska skickas in då vi är kopplade till databasen.
+
 process.exit();
