@@ -9,34 +9,21 @@
 </head>
 
 <body>
-  <h1>PDF</h1>
+    <h1>PDF </h1>
+    <!-- A form with a search field and a search button-->
+    <!-- Call the search function when the form is sent/submitted -->
+    <!-- return false is needed fro the web page NOT to reload -->
+    <form name="searchForm" onsubmit="search(); return false">
+      <input name="term" placeholder="Search term">
+      <button type="submit">Search</button>
+     
+    </form>
+
+    <article class="searchResults">
+      Search for a PDF
+    </article>
+
+    <script src="main.js"></script>
+  </body>
   
-  <p>There is also a <a href="cats.html">Cats page here</a>.</p>
-
-  <p>A good page about being a dog owner <a target="_blank"
-      href="https://www.dailypaws.com/dogs-puppies/dog-adoption/first-time-dog-owner-tips">can be found here</a>.</p>
-
-  <section>
-    <h2>Lassie</h2>
-    <img src="images/lassie.jpg">
-    <p>Lassie is a happy and mischievous. She likes to hide inside old boxes. She also likes bones.</p>
-  </section>
-
-  <section>
-    <h2 class="h2-yellow">Fido</h2>
-    <img src="images/fido.jpg">
-    <p>Fido is a calm dog. He likes to look out the window on the traffic outside her apartment. He also likes his old
-      blanket.</p>
-  </section>
-
-  <section>
-    <h2>Martha</h2>
-    <img src="images/martha.jpg">
-    <p>Martha is kind to her owners, but quite aggressive towards other pets - both cats and dogs. She
-      likes to be in
-      control.</p>
-  </section>
-
-</body>
-
-</html>
+  </html>
