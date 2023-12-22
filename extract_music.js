@@ -17,11 +17,11 @@ async function query(sql, listOfValues) {
     return result[0];
 }
 
-const files = await fs.readdirSync('music');
+const files = fs.readdirSync('./Client/music');
 
 //Loop, reading metadata and getting it/extracting 
 for (let file of files) {
-    let metadata = await musicMetadata.parseFile('./music/' + file);
+    let metadata = await musicMetadata.parseFile('.Client/music/' + file);
 
 
 delete metadata.native;
