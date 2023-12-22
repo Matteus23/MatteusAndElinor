@@ -4,8 +4,6 @@ import mysql from 'mysql2/promise';
 
 import fs from 'fs';
  
-let pdfs = fs.readdirSync('.\Client\pdfs');
- 
 const db = await mysql.createConnection({
     host: '161.97.144.27',
     port: "8094",
@@ -19,16 +17,23 @@ async function query(sql, listOfValues) {
   return result[0];
 }
  
-const files = await fs.readdirSync('pdfs');
+const pdfs = fs.readdirSync('./Client/pdfs');
  
 for (let pdf of pdfs) {
+  
+  let data = await pdfParse(fs.readFileSync('./Client/pdfs/' + pdf))
+   
+  let metadata = {
+    numpages: data.numpages,
+    info: data.info
+  };
  
-  // Ta metadatan från filen
-  let metadata = await pdfParse(fs.readFileSync('./pdfs/' + pdf));
- 
-  // Sätt in i databasen med hjälp av query funktionen
+
+  // get the full text of the pdf as well
+  let fullText = data.text;
+
   let result = await query(`
-    INSERT INTO pdf (pdfName, pdfDescription)
+    INSERT INTO pdfs (name, description)
     VALUES(?, ?)
   `, [pdf, metadata]);
  
