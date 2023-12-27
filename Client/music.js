@@ -25,7 +25,7 @@ async function search() {
           <p><b>Artist:</b> ${meta.artist}</p>
           <p><b>Album:</b> ${meta.album}</p>  
           <p>
-            <audio controls src="music/${song.fileName}">
+            <audio controls src="music/${song.filename}">
           </p>
         </section>
       `;
