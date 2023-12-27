@@ -3,7 +3,7 @@ body {
   }
   
   img {
-    width: 200px;
+    width: 100px;
     float: right;
   }
   
@@ -71,8 +71,6 @@ a:active {
   text-decoration: none;
 }
 
-
-
   .index {
     background-image: url(backgrounds/index.jpg);
     background-position: center center;
@@ -89,22 +87,15 @@ a:active {
   }
 
   .pdfs {
-<<<<<<< Updated upstream
     background-image: url(backgrounds/pdfs.jpg);
     background-position: center center;
     }
-  
-=======
-    background-image: url(backgrounds);
-    background-position: center center;
-  }
 
   .music {
-    background-image: url(backgrounds/music.jpg);
-    background-position: center center;
-  }
->>>>>>> Stashed changes
-
+      background-image: url(backgrounds/music.jpg);
+      background-position: center center;
+      }
+  
   footer {
     background-color: #333;
     color: white;
