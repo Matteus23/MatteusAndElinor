@@ -18,7 +18,7 @@ async function search() {
     `;
     
     for (let song of songs) {
-      let meta = song.metadata.common;
+      let meta = song.description.common;
       html += `
         <section>
           <h2>${meta.title}</h2>
