@@ -38,3 +38,7 @@ body {
   .searchResults {
     margin-top: 20px;
   }
+
+  .index {
+    font-family: 'Times New Roman';
+  }
