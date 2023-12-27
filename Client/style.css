@@ -43,17 +43,14 @@ a:link {
   color: blue;
 }
 
-/* visited link */
 a:visited {
   color: blue;
 }
 
-/* mouse over link */
 a:hover {
   color: darkblue;
 }
 
-/* selected link */
 a:active {
   color: blue;
 }
@@ -92,10 +89,21 @@ a:active {
   }
 
   .pdfs {
+<<<<<<< Updated upstream
     background-image: url(backgrounds/pdfs.jpg);
     background-position: center center;
     }
   
+=======
+    background-image: url(backgrounds);
+    background-position: center center;
+  }
+
+  .music {
+    background-image: url(backgrounds/music.jpg);
+    background-position: center center;
+  }
+>>>>>>> Stashed changes
 
   footer {
     background-color: #333;
