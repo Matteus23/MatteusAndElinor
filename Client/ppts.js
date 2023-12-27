@@ -21,10 +21,10 @@ async function search() {
       html += ` 
         <section>
           <h2>${ppts.name}</h2>
-          <img src="Powerpoints/${ppts.meta.image}">
-          <p><b>Title:</b>${ppts.description.title}</p>
-          <p><b>Company:</b>${ppts.description.company}</p>
-          <p>${ppts.meta.description}</p>
+          <img src="Powerpoints/${meta.image}">
+          <p><b>Title:</b>${meta.title}</p>
+          <p><b>Company:</b>${meta.company}</p>
+          <p>${meta.description}</p>
           <p>
           <a href="Powerpoints/${ppts.name}">Download the Powerpoint<a/>.
           <p>
