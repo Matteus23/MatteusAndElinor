@@ -39,12 +39,65 @@ body {
     margin-top: 20px;
   }
 
+a:link {
+  color: blue;
+}
+
+/* visited link */
+a:visited {
+  color: blue;
+}
+
+/* mouse over link */
+a:hover {
+  color: darkblue;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+
+
   .index {
-    font-family: 'Times New Roman';
+    background-image: url(backgrounds/index.jpg);
+    background-position: center center;
   }
 
+  .images {
+    background-image: url(backgrounds/images.jpg);
+    background-position: center center;
+  }
+
+  .ppts {
+    background-image: url(backgrounds/ppts.jpg);
+    background-position: center center;
+  }
+  
+
   footer {
-    background-color: #f1f1f1;
-    padding: 10px;
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
