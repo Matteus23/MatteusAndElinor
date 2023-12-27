@@ -10,7 +10,7 @@ app.listen(3000, () =>
   console.log('Listening on http://localhost:3000'));
 
 const db = await mysql.createConnection({
-  host: '161.97.144.24',
+  host: '161.97.144.27',
   port: 8094,
   user: 'root',
   password: 'guessagain94',
@@ -28,7 +28,7 @@ app.get('/api/music/:searchTerm/:searchType', async (request, response) => {
   let sql = `
    SELECT * 
    FROM music
-   WHERE LOWER(metadata -> '$.common.${searchType}') LIKE LOWER (?)
+   WHERE LOWER(description -> '$.common.${searchType}') LIKE LOWER (?)
   `;
   
   if (searchType == 'all') {
