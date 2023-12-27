@@ -11,7 +11,7 @@ app.listen(3000, () =>
 
 const db = await mysql.createConnection({
   host: '161.97.144.27',
-  port: 8094,
+  port: '8094',
   user: 'root',
   password: 'guessagain94',
   database: 'matteus_elinors'
@@ -60,7 +60,7 @@ app.get('/api/pdfs/:searchTerm', async (request, response) => {
 
   let result = await query(`
     SELECT *
-    FROM pdf
+    FROM pdfs
     WHERE LOWER (description -> '$.info') LIKE LOWER(?)
   `, ['%' + searchTerm + '%']);
 
