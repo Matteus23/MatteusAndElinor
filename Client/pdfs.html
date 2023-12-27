@@ -9,19 +9,15 @@
 </head>
 
 <body>
-    <h1>PDF</h1>
+  <h1>Search for a PDF</h1>
+  <form name="searchForm" onsubmit="search(); return false">
+    <input name="term" placeholder="What PDF are you looking for?">
+    <button type="submit">Search</button>
+  </form>
+  <article class="searchResults">
+    
+  </article>
+  <script src="main.js"></script>
+</body>
 
-    <article class="searchResults">
-      Search for a PDF
-    </article>
-
-    <form name="searchForm" onsubmit="search(); return false">
-      <input name="term" placeholder="Search term">
-      <button type="submit">Search</button>
-     
-    </form>
-
-    <script src="main.js"></script>
-  </body>
-  
-  </html>
+</html>
