@@ -90,6 +90,11 @@ a:active {
     background-image: url(backgrounds/ppts.jpg);
     background-position: center center;
   }
+
+  .pdfs {
+    background-image: url(backgrounds/pdfs.jpg);
+    background-position: center center;
+    }
   
 
   footer {
