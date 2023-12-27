@@ -7,7 +7,7 @@ async function search() {
    
     document.forms.searchForm.term.value = '';
    
-    let rawData = await fetch('/api/Powerpoints/' + searchTerm + '/' + searchType);
+    let rawData = await fetch('/api/ppts/' + searchTerm + '/' + searchType);
     
     let ppts = await rawData.json();
    
