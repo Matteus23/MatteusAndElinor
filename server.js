@@ -23,11 +23,12 @@ async function query(sql, listOfValues) {
 }
 
 app.get('/api/music/:searchTerm/:searchType', async (request, response) => {
+  let searchTerm = request.params.searchTerm;
   let searchType = request.params.searchType;
   let sql = `
    SELECT * 
    FROM music
-   WHERE LOWER(description -> '$.common.${searchType}') LIKE LOWER (?)
+   WHERE LOWER(metadata -> '$.common.${searchType}') LIKE LOWER (?)
   `;
   
   if (searchType == 'all') {
@@ -75,6 +76,6 @@ app.get('/api/ppts/:searchTerm', async (request, response) => {
     FROM ppts
     WHERE LOWER(description)LIKE LOWER(?)
   `, ['%' + searchTerm + '%']);
-
+  
   response.json(result);
 });
