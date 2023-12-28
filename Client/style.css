@@ -73,27 +73,27 @@ a:active {
 
   .index {
     background-image: url(backgrounds/index.jpg);
-    background-position: center center;
+    background-size: cover;
   }
 
   .images {
     background-image: url(backgrounds/images.jpeg);
-    background-position: center center;
+    background-size: cover;
   }
 
   .ppts {
     background-image: url(backgrounds/ppts.jpg);
-    background-position: center center;
+    background-size: cover;
   }
 
   .pdfs {
     background-image: url(backgrounds/pdfs.jpg);
-    background-position: center center;
+    background-size: cover;
     }
 
   .music {
       background-image: url(backgrounds/music.jpg);
-      background-position: center center;
+      background-size: cover;
       }
   
   footer {
