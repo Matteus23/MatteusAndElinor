@@ -44,14 +44,26 @@ app.get('/api/music/:searchTerm/:searchType', async (request, response) => {
   response.json(result);
 });
 
-app.get('/api/images/:searchTerm', async (request, response) => {
+app.get('/api/images/:searchTerm/:searchType', async (request, response) => {
   let searchTerm = request.params.searchTerm;
-  let result = await query(`
-    SELECT *
-    FROM images
-    WHERE LOWER (description) LIKE LOWER(?)
-  `, ['%' + searchTerm + '%']);
- 
+  let searchimages = request.params.searchType;
+  
+  let sql = `
+   SELECT * 
+   FROM images
+   WHERE LOWER(description.${searchimages}') LIKE LOWER (?)
+  `;
+  
+  if (searchimages == 'all') {
+    sql = `
+      SELECT *
+      FROM images
+      WHERE LOWER(description) LIKE LOWER (?)
+    `;
+  }
+
+  let result = await query(sql, ['%' + searchTerm + '%']);
+
   response.json(result);
 });
 
@@ -85,7 +97,7 @@ app.get('/api/ppts/:searchTerm/:searchType', async (request, response) => {
   let sql = `
    SELECT * 
    FROM ppts
-   WHERE LOWER(description -> '$.info.${searchppts}') LIKE LOWER (?)
+   WHERE LOWER(description.${searchppts}') LIKE LOWER (?)
   `;
   
   if (searchppts == 'all') {
