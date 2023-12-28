@@ -14,7 +14,7 @@ async function search() {
    
     let html = `
       <p>You searched for "${searchTerm}"...</p>
-      <p>Found ${songs.length} Songs.</p>
+      <p>Found ${songs.length} songs.</p>
     `;
     
     for (let song of songs) {

@@ -11,7 +11,7 @@ async function search() {
    
     let html = `
       <p>You searched for "${searchTerm}"...</p>
-      <p>Found ${images.length} Images.</p>
+      <p>Found ${images.length} images.</p>
     `;
     
     for (let image of images) {

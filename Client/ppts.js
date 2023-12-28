@@ -10,7 +10,7 @@ async function search() {
    
     let html = `
       <p>You searched for "${searchTerm}"...</p>
-      <p>Found ${ppts.length} Powerpoints.</p>
+      <p>Found ${ppts.length} powerpoints.</p>
     `;
     
     for (let ppt of ppts) {
