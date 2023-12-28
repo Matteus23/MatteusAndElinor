@@ -55,14 +55,25 @@ app.get('/api/images/:searchTerm', async (request, response) => {
   response.json(result);
 });
 
-app.get('/api/pdfs/:searchTerm', async (request, response) => {
+app.get('/api/pdfs/:searchTerm/:searchType', async (request, response) => {
   let searchTerm = request.params.searchTerm;
+  let searchType = request.params.searchType;
+  
+  let sql = `
+   SELECT * 
+   FROM pdfs
+   WHERE LOWER(description -> '$.info.${searchType}') LIKE LOWER (?)
+  `;
+  
+  if (searchType == 'info') {
+    sql = `
+      SELECT *
+      FROM pdfs
+      WHERE LOWER(description) LIKE LOWER (?)
+    `;
+  }
 
-  let result = await query(`
-    SELECT *
-    FROM pdfs
-    WHERE LOWER (description -> '$.info') LIKE LOWER(?)
-  `, ['%' + searchTerm + '%']);
+  let result = await query(sql, ['%' + searchTerm + '%']);
 
   response.json(result);
 });
