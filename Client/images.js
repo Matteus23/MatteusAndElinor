@@ -2,10 +2,14 @@
 async function search() {
     
     let searchTerm = document.forms.searchForm.term.value;
+    let searchType = document.forms.searchForm.searchType.value;
+    
+    console.log(searchType);
+   
    
     document.forms.searchForm.term.value = '';
     
-    let rawData = await fetch('/api/images/' + searchTerm);
+    let rawData = await fetch('/api/images/' + searchTerm + '/' + searchType);
     
     let images = await rawData.json();
    
