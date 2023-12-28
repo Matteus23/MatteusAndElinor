@@ -61,26 +61,31 @@ body {
 .index {
     background-image: url(backgrounds/index.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
   .images {
     background-image: url(backgrounds/images.jpeg);
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .ppts {
     background-image: url(backgrounds/ppts.jpg);
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .pdfs {
     background-image: url(backgrounds/pdfs.jpg);
     background-size: cover;
+    background-attachment: fixed;
     }
 
   .music {
       background-image: url(backgrounds/music.jpg);
       background-size: cover;
+      background-attachment: fixed;
       }
   
   footer {
