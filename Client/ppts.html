@@ -13,6 +13,14 @@
   <form name="searchForm" onsubmit="search(); return false">
     <input name="term" placeholder="What powerpoint are you looking for?">
     <button type="submit">Search</button>
+    <p>
+      Filter my search:
+      <select name="searchType">
+        <option value="all">All the information about Powerpoints</option>
+        <option value="Title">Title name</option>
+        <option value="Company">Company name</option>
+      </select>
+    </p>
   </form>
   <article class="searchResults">
     
