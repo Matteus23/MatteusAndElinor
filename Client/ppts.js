@@ -22,7 +22,7 @@ async function search() {
           <p><b>Company:</b>${meta.company}</p>
           <p><b>Number of slides:<b>${meta.slide_count}</p>
           <p>
-          <a href="ppts/${ppt.name}">Download the Powerpoint<a/>.
+          <a target="_blank" href="ppts/${ppt.name}">Download the Powerpoint<a/>.
           <p>
         
             

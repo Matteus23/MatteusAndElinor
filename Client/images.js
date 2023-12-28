@@ -19,7 +19,7 @@ async function search() {
         <section>
           <h2>${image.name}</h2>
           <img src="images/${image.name}">
-          <p>${image.description.Make}<p>
+          <p><b>Make:<b>${image.description.Make}<p>
         </section>
       `;
     }
