@@ -49,21 +49,21 @@ header {
   }
 
   a:link {
-  color: blue;
+  color: white;
   text-decoration: none;
   }
 
   a:visited {
-  color: blue;
+  color: white;
   text-decoration: none;
   }
 
   a:hover {
-  color: darkblue;
+  color: white;
   }
 
   a:active {
-  color: blue;
+  color: white;
   text-decoration: none;
   }
 
