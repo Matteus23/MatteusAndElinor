@@ -24,7 +24,7 @@ async function search() {
           <h2>${meta.Title}</h2>
           <p><b>Author:</b>${meta.Author}</p>
           <p><b>Creator:</b>${meta.Creator}</p>
-            <a href="pdfs/${pdf.pdfsName}">Download the PDF</a>.
+            <a href="pdfs/${pdfs.name}">Download the PDF</a>.
         </section>
       `;
     }

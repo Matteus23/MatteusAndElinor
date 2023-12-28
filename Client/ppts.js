@@ -20,7 +20,7 @@ async function search() {
       let meta = ppts.description.common;
       html += ` 
         <section>
-          <h2>${ppts.name}</h2>
+          <h2>${meta.name}</h2>
           <img src="Powerpoints/${meta.image}">
           <p><b>Title:</b>${meta.title}</p>
           <p><b>Company:</b>${meta.company}</p>
