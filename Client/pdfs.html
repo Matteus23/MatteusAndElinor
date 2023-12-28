@@ -13,6 +13,14 @@
   <form name="searchForm" onsubmit="search(); return false">
     <input name="term" placeholder="What PDF are you looking for?">
     <button type="submit">Search</button>
+    <p>
+      Filter my search:
+      <select name="searchType">
+        <option value="all">All the information about PDFs</option>
+        <option value="Author">Author name</option>
+        <option value="Creator">Creator name</option>
+      </select>
+    </p>
   </form>
   <article class="searchResults">
     
