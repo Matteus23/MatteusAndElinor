@@ -57,15 +57,15 @@ app.get('/api/images/:searchTerm', async (request, response) => {
 
 app.get('/api/pdfs/:searchTerm/:searchType', async (request, response) => {
   let searchTerm = request.params.searchTerm;
-  let searchType = request.params.searchType;
+  let searchpdfs = request.params.searchType;
   
   let sql = `
    SELECT * 
    FROM pdfs
-   WHERE LOWER(description -> '$.info.${searchType}') LIKE LOWER (?)
+   WHERE LOWER(description -> '$.info.${searchpdfs}') LIKE LOWER (?)
   `;
   
-  if (searchType == 'all') {
+  if (searchpdfs == 'all') {
     sql = `
       SELECT *
       FROM pdfs
@@ -78,15 +78,25 @@ app.get('/api/pdfs/:searchTerm/:searchType', async (request, response) => {
   response.json(result);
 });
 
-app.get('/api/ppts/:searchTerm', async (request, response) => {
-  
+app.get('/api/ppts/:searchTerm/:searchType', async (request, response) => {
   let searchTerm = request.params.searchTerm;
-
-  let result = await query(`
-    SELECT *
-    FROM ppts
-    WHERE LOWER(description)LIKE LOWER(?)
-  `, ['%' + searchTerm + '%']);
+  let searchppts = request.params.searchType;
   
+  let sql = `
+   SELECT * 
+   FROM ppts
+   WHERE LOWER(description -> '$.info.${searchppts}') LIKE LOWER (?)
+  `;
+  
+  if (searchppts == 'all') {
+    sql = `
+      SELECT *
+      FROM ppts
+      WHERE LOWER(description) LIKE LOWER (?)
+    `;
+  }
+
+  let result = await query(sql, ['%' + searchTerm + '%']);
+
   response.json(result);
 });
