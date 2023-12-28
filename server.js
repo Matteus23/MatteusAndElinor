@@ -65,7 +65,7 @@ app.get('/api/pdfs/:searchTerm/:searchType', async (request, response) => {
    WHERE LOWER(description -> '$.info.${searchType}') LIKE LOWER (?)
   `;
   
-  if (searchType == 'info') {
+  if (searchType == 'all') {
     sql = `
       SELECT *
       FROM pdfs
