@@ -27,54 +27,41 @@ body {
   }
   
   input {
-    width: 60%;
-    padding: 5px;
+    width: 30%;
+    padding: 7px;
   }
   
   button {
-    padding: 5px;
-  }
-  
-  .searchResults {
-    margin-top: 20px;
+    padding: 7px;
   }
 
-a:link {
+  a:link {
   color: blue;
-}
+  text-decoration: none;
+  }
 
-a:visited {
+  a:visited {
   color: blue;
-}
+  text-decoration: none;
+  }
 
-a:hover {
+  a:hover {
   color: darkblue;
-}
+  }
 
-a:active {
+  a:active {
   color: blue;
-}
-
-a:link {
   text-decoration: none;
+  }
+
+.searchResults {
+    margin-top: 20px;
 }
 
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a:active {
-  text-decoration: none;
-}
-
-  .index {
+.index {
     background-image: url(backgrounds/index.jpg);
     background-size: cover;
-  }
+}
 
   .images {
     background-image: url(backgrounds/images.jpeg);
