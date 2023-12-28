@@ -2,12 +2,9 @@ async function search() {
 
     let searchTerm = document.forms.searchForm.term.value;
    
-    let searchType = document.forms.searchForm.searchType.value;
-    console.log(searchType);
-   
     document.forms.searchForm.term.value = '';
    
-    let rawData = await fetch('/api/ppts/' + searchTerm + '/' + searchType);
+    let rawData = await fetch('/api/ppts/' + searchTerm);
     
     let ppts = await rawData.json();
    
@@ -17,23 +14,22 @@ async function search() {
     `;
     
     for (let ppt of ppts) {
-      let meta = ppts.description.common;
+      let meta = ppt.description;
       html += ` 
         <section>
-          <h2>${meta.name}</h2>
-          <img src="Powerpoints/${meta.image}">
+          <h2>${meta.title}</h2>
           <p><b>Title:</b>${meta.title}</p>
           <p><b>Company:</b>${meta.company}</p>
-          <p>${meta.description}</p>
+          <p><b>Number of slides:<b>${meta.slide_count}</p>
           <p>
-          <a href="Powerpoints/${ppts.name}">Download the Powerpoint<a/>.
+          <a href="ppts/${ppt.name}">Download the Powerpoint<a/>.
           <p>
         
             
         </section>
       `;
     }
-    s
+    
     let searchResultsElement = document.querySelector('.searchResults');
     
     searchResultsElement.innerHTML = html;

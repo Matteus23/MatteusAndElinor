@@ -30,7 +30,6 @@ async function search() {
         </section>
       `;
     }
-    s
     let searchResultsElement = document.querySelector('.searchResults');
     
     searchResultsElement.innerHTML = html;
