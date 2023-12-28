@@ -22,8 +22,8 @@ async function search() {
       html += `
         <section>
           <h2>${meta.title}</h2>
-          <p><b>Artist:</b> ${meta.artist}</p>
-          <p><b>Album:</b> ${meta.album}</p>  
+          <p><b>Artist: </b> ${meta.artist}</p>
+          <p><b>Album: </b> ${meta.album}</p>  
           <p>
             <audio controls src="music/${song.name}">
           </p>

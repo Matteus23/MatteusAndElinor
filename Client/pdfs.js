@@ -20,8 +20,8 @@ async function search() {
       html += ` 
         <section>
           <h2>${meta.Title}</h2>
-          <p><b>Author:</b>${meta.Author}</p>
-          <p><b>Creator:</b>${meta.Creator}</p>
+          <p><b>Author: </b>${meta.Author}</p>
+          <p><b>Creator: </b>${meta.Creator}</p>
             <a target="_blank" href="pdfs/${pdf.name}">Download the PDF</a>.
         </section>
       `;

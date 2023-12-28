@@ -18,9 +18,9 @@ async function search() {
       html += ` 
         <section>
           <h2>${meta.title}</h2>
-          <p><b>Title:</b>${meta.title}</p>
-          <p><b>Company:</b>${meta.company}</p>
-          <p><b>Number of slides:<b>${meta.slide_count}</p>
+          <p><b>Title: </b>${meta.title}</p>
+          <p><b>Company: </b>${meta.company}</p>
+          <p><b>Number of slides: <b>${meta.slide_count}</p>
           <p>
           <a target="_blank" href="ppts/${ppt.name}">Download the Powerpoint<a/>.
           <p>
