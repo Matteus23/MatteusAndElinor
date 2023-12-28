@@ -1,7 +1,20 @@
 body {
-    font-family: Verdana;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #222; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
   img {
     width: 200px;
     float: right;
@@ -97,24 +110,6 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
-
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #222; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 20vh;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
   }
   
   nav {
