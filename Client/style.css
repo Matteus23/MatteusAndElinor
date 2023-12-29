@@ -19,7 +19,7 @@ header {
   
   section {
     overflow: auto;
-    padding: 5px;
+    margin-bottom: 40px;
   }
   
   h1 {
@@ -40,22 +40,17 @@ header {
   }
 
   a:link {
-  color: rgb(43, 41, 41);
-  text-decoration: none;
+  color: black;
+  text-decoration: underline;
   }
 
   a:visited {
-  color: rgb(34, 33, 33);
-  text-decoration: none;
+  color: grey;
+  text-decoration: underline;
   }
 
   a:hover {
-  color: rgb(55, 54, 54);
-  }
-
-  a:active {
-  color: white;
-  text-decoration: none;
+  color: darkgrey;
   }
 
 .index {
