@@ -16,27 +16,22 @@ header {
   padding: 10px;
 }
   img {
-    width: 200px;
-    float: left;
+    width: 30%;
+    float: center;
   }
   
   section {
     overflow: auto;
-    border-bottom: 1px solid black;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-  }
-  
-  h2 {
-    color: rgb(10, 9, 9);
+    padding-top: 10%;
+    padding-bottom: 0%;
   }
   
   h1 {
     color: rgb(9, 53, 74);
   }
   
-  .h2-yellow {
-    color: #cbbc1a;
+  .h2 {
+    color: black;
   }
   
   input {
@@ -59,18 +54,13 @@ header {
   }
 
   a:hover {
-  color: white;
+  color: rgb(55, 54, 54);
   }
 
   a:active {
   color: white;
   text-decoration: none;
   }
-
-.searchResults {
-    margin-top: 40px;
-
-}
 
 .index {
     text-align: center;
