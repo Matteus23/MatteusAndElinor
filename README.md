@@ -1,9 +1,10 @@
 # MatteusAndElinor
 
-User names on Gifthub Elinuuur och Matteus23
+Matteus and Elinors metadata search engine.
 
-Link to repository 
-https://github.com/Matteus23/MatteusAndElinor
+Our user names on Gifthub are Matteus23 and Elinuuur.
 
-Link to Trello
-https://trello.com/b/3Heaw4hJ/metadata-s%C3%B6kmotor
+Link to SCRUM-board:
+https://trello.com/b/3Heaw4hJ/metadata-s%C3%B6kmotor.
+
+All files in our database are from the Node Hill blog. 
