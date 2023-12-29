@@ -94,7 +94,6 @@ header {
   }
   
   nav {
-    background-color: #413f3f; 
     padding: 10px;
     text-align: center;
     display: flex;
@@ -103,24 +102,19 @@ header {
   
   .nav-link, .search-link {
     display: inline-block;
-    color: white;
     text-decoration: none;
-    margin: 0 60px;
-    font-size: 20px;
-    padding: 10px 40px; 
-    border-radius: 5px; 
-    background-color: #9c9999;
+    margin: 30px;
+    font-size: 25px;
+    padding: 20px 25px; 
+    border-radius: 10px; 
+    background-color: #dddfc7;
     cursor: pointer;
   }
   
   .nav-link:hover, .search-link:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid grey;
   }
   
-
-  a:hover {
-    color: blue
-  }
   
  
   
