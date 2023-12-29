@@ -40,12 +40,12 @@ header {
   }
 
   a:link {
-  color: white;
+  color: rgb(43, 41, 41);
   text-decoration: none;
   }
 
   a:visited {
-  color: white;
+  color: rgb(34, 33, 33);
   text-decoration: none;
   }
 
@@ -99,7 +99,7 @@ header {
   }
   
   nav {
-    background-color: #444; 
+    background-color: #413f3f; 
     padding: 10px;
     text-align: center;
     display: flex;
@@ -114,12 +114,12 @@ header {
     font-size: 20px;
     padding: 10px 40px; 
     border-radius: 5px; 
-    background-color: #555;
+    background-color: #9c9999;
     cursor: pointer;
   }
   
   .nav-link:hover, .search-link:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(52, 8, 248);
   }
   
 
