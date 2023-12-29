@@ -23,8 +23,7 @@ async function search() {
         <section>
           <h2>${image.name}</h2>
           <img src="images/${image.name}">
-          <p><b>Make: <b>${image.description.Make}<p>
-          <p><b>Model: <b>${image.description.Model}<p>
+          <p>Make: ${image.description.Make} Model: ${image.description.Model}<p>
           <a target="_blank" href="https://maps.google.com/?q=${image.description.latitude},${image.description.longitude}">Show on map</a>
         </section>
       `;
