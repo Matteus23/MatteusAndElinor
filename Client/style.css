@@ -114,11 +114,13 @@ header {
   }
   
   .nav-link:hover, .search-link:hover {
-    border-bottom: 2px solid rgb(52, 8, 248);
+    border-bottom: 2px solid white;
   }
   
 
-  
+  a:hover {
+    color: blue
+  }
   
  
   
